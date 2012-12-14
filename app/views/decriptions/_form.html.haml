@@ -1,0 +1,19 @@
+= form_for @decription do |f|
+  - if @decription.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@decription.errors.count, "error")} prohibited this decription from being saved:"
+      %ul
+        - @decription.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :user_id
+    = f.number_field :user_id
+  .field
+    = f.label :quote_id
+    = f.number_field :quote_id
+  .field
+    = f.label :text
+    = f.text_area :text
+  .actions
+    = f.submit 'Save'

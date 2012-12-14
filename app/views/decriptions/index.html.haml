@@ -1,0 +1,23 @@
+%h1 Listing decriptions
+
+%table
+  %tr
+    %th User
+    %th Quote
+    %th Text
+    %th
+    %th
+    %th
+
+  - @decriptions.each do |decription|
+    %tr
+      %td= decription.user_id
+      %td= decription.quote_id
+      %td= decription.text
+      %td= link_to 'Show', decription
+      %td= link_to 'Edit', edit_decription_path(decription)
+      %td= link_to 'Destroy', decription, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Decription', new_decription_path

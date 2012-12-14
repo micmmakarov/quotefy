@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b User:
+  = @decription.user_id
+%p
+  %b Quote:
+  = @decription.quote_id
+%p
+  %b Text:
+  = @decription.text
+
+= link_to 'Edit', edit_decription_path(@decription)
+\|
+= link_to 'Back', decriptions_path
