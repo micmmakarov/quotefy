@@ -1,1 +1,1 @@
-class App.Models.Description extends Backbone.Collection
+class App.Models.Description extends Backbone.Model

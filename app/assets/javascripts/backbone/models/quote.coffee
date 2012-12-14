@@ -1,1 +1,2 @@
-class App.Models.Quote extends Backbone.Collection
+class App.Models.Quote extends Backbone.Model
+  initialize: ->

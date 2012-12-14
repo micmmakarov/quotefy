@@ -6,4 +6,4 @@ class App.Routers.main extends Backbone.Router
 
 
   index: ->
-    alert "here we go!"
+    @view = new App.Views.Home({el:"#content"})
